@@ -1,0 +1,196 @@
+### **1. Python 3.12 (Advanced)**
+
+* ✅ **Core Concepts**: OOPs, Decorators, Generators, Coroutines
+* ✅ **Async Programming**: `asyncio`, synchronous vs asynchronous, event loop
+* ✅ **Typing & Type Hints** (PEP 484, PEP 604 – union types, etc.)
+* ✅ **Dataclasses** and `attrs` library
+* ✅ **Context Managers** and custom context managers (`__enter__`, `__exit__`)
+* ✅ **Exception handling** (custom exceptions, best practices)
+* ✅ **Performance tools**: `cProfile`, `timeit`, `tracemalloc`, `functools.lru_cache`
+* ✅ **New in Python 3.12**: f-string debugging improvements, exception groups, new typing features
+
+---
+
+### **2. Django Framework (Deep Dive)**
+
+* ✅ **Project structure & request lifecycle**
+* ✅ **Middlewares & Custom middleware**
+* ✅ **Signals and use-cases**
+* ✅ **Django ORM deep-dive**:
+
+  * Query optimization (select_related, prefetch_related)
+  * F & Q objects
+  * Transactions (`atomic`) and `savepoint`
+  * Raw SQL integration
+  * Database indexes & query plans (`EXPLAIN ANALYZE`)
+* ✅ **Authentication systems:**
+
+  * Django Session-based Auth (default)
+  * JWT (using `SimpleJWT` or `rest_framework_jwt`)
+  * Firebase authentication (custom backend or middleware integration)
+* ✅ **Permissions & Authorization**
+
+  * DRF permissions (IsAuthenticated, custom permission classes)
+  * Role-based access
+* ✅ **Serializers (DRF)** — custom fields, validation, nested serializers
+* ✅ **Pagination, Filtering, and Throttling in DRF**
+* ✅ **File Uploads & S3 integration (django-storages)**
+* ✅ **Testing in Django** — unit tests, mocks, test client, fixtures
+
+---
+
+### **3. Databases – PostgreSQL**
+
+* ✅ **pg_dump / pg_restore** usage
+* ✅ **Joins**: inner, left, right, full, cross
+* ✅ **Views, materialized views, indexes, constraints**
+* ✅ **Transactions, locks, isolation levels**
+* ✅ **Performance tuning**: `EXPLAIN ANALYZE`, indexing strategies, query optimization
+* ✅ **JSON fields & PostgreSQL functions (`->`, `->>`, `jsonb_set`)**
+* ✅ **Schema migrations with Django (South/Migrations system)**
+
+---
+
+### **4. Redis**
+
+* ✅ **Caching strategies**:
+
+  * Page caching, fragment caching, low-level cache API
+  * Redis as Django cache backend
+* ✅ **Pub/Sub and Queues (Celery/Temporal usage)**
+* ✅ **Rate limiting / Throttling using Redis**
+* ✅ **Storing sessions in Redis**
+
+---
+
+### **5. Task Orchestration & Workflow Systems**
+
+* ✅ **Celery** (you already noted this): retries, chaining, periodic tasks
+* ✅ **Temporal** (important here):
+
+  * Concepts: Workflow, Activity, Task Queue, Worker
+  * Temporal vs Celery comparison
+  * Python SDK overview
+  * Reliability and retry semantics
+  * Long-running workflows and signals
+
+---
+
+### **6. AWS & DevOps Basics**
+
+* ✅ **AWS S3** – boto3 basics, pre-signed URLs, permissions, storage backends
+* ✅ **AWS EC2** – deployment, environment setup
+* ✅ **AWS IAM** – access management (for S3 and EC2 roles)
+* ✅ **Docker** – Dockerfile optimization, docker-compose, networking
+* ✅ **Basic CI/CD** – GitHub Actions or similar
+* ✅ **Logging & Monitoring** – AWS CloudWatch, Django logging configuration
+
+---
+
+### **7. Caching & Performance**
+
+* ✅ **Django caching framework** (File-based, Memcached, Redis)
+* ✅ **Query optimization** (minimizing ORM calls, lazy vs eager loading)
+* ✅ **N+1 problem and how to avoid it**
+* ✅ **Scaling strategies**: horizontal vs vertical scaling
+* ✅ **Load testing tools** (Locust, k6 basics)
+
+---
+
+### **8. Authentication & Security**
+
+* ✅ **JWT internals** – structure, signature validation, expiration
+* ✅ **Firebase Authentication flow** (verifying ID tokens server-side)
+* ✅ **Session-based auth and CSRF protection**
+* ✅ **Django Security Best Practices**:
+
+  * `ALLOWED_HOSTS`, `SECURE_*` settings
+  * XSS, CSRF, Clickjacking prevention
+  * Password hashing (`PBKDF2`, `Argon2`)
+* ✅ **OAuth2 / Social Auth basics**
+
+---
+
+### **9. Software Engineering Practices**
+
+* ✅ **Version control (Git)** – branching, PRs, conflict resolution
+* ✅ **Async collaboration tools** (e.g. working with distributed teams)
+* ✅ **Using AI tools like Claude / Copilot effectively**
+* ✅ **Code reviews and writing maintainable code**
+* ✅ **Design Patterns in Python/Django** (Singleton, Repository, Factory, etc.)
+
+---
+
+### **10. Domain Knowledge (Bonus)**
+
+* ✅ **Logistics & Supply Chain Basics**
+
+  * Shipment lifecycle (Order → Dispatch → Delivery)
+  * Inventory management concepts
+  * Workflow orchestration relevance (Temporal use-case here)
+* ✅ **System Design for logistics**
+
+  * Event-driven architecture
+  * Handling large datasets
+  * Caching and eventual consistency in distributed systems
+
+---
+
+### **11. Miscellaneous (High-Impact but Often Missed)**
+
+* ✅ **Testing async code and Celery tasks**
+* ✅ **Database migrations and data migrations**
+* ✅ **Using `pytest-django`**
+* ✅ **Integration with external APIs (REST, Webhooks, etc.)**
+* ✅ **Async Django (`asgiref`, `channels`)**
+* ✅ **Performance profiling** (`django-silk`, `debug-toolbar`)
+
+---
+
+### ✅ **Final Suggested Prep Order**
+
+1. Django (ORM, Auth systems, Views, REST, Signals)
+2. PostgreSQL (Joins, Transactions, Optimizations)
+3. Redis + Caching
+4. Celery / Temporal (compare + architecture)
+5. AWS S3 + DevOps basics
+6. Advanced Python (Asyncio, Coroutines, Decorators)
+7. Security + Scaling
+8. Domain understanding (Logistics, workflow orchestration)
+
+---
+
+Would you like me to make this into a **structured 7-day preparation roadmap** (with daily topic focus + practical exercises)?
+That’d make it easier to systematically prepare before the interview.
+
+
+Job Description
+Roles and Responsibilities:
+1.Design, build, and maintain efficient, reusable, and reliable Python code for Django application
+2.Interact with and optimize PostgreSQL databases, ensuring high performance and data integrity
+3.Work with various services and systems, including AWS S3 for storage and Redis for caching
+4.Implement and manage different authentication methods, including JWTAuthentication for clients and FirebaseAuthentication for our internal Ops Dashboard, while maintaining Django's session-based authentication for the admin panel
+5.Utilize Temporal to manage complex workflows and ensure reliable task execution
+6.Identify and resolve performance and scalability issues throughout the application
+7.Work effectively with global, cross-functional teams, communicating clearly and managing your tasks asynchronously
+8.Stay up-to-date with emerging technologies and best practices, and apply them to improve our development processes
+9.Collaborate with a global team of like-minded engineers to build and maintain high-quality software solutions. 
+10.Help transition from no-code platforms to scalable solutions. 
+11.Participate in async communication, daily check-ins, and effectively manage blockers to ensure smooth project progress. 
+
+Required Skills & Qualifications
+1.5+ years of experience as a Backend Web Developer
+2.Expert-level proficiency in Python 3.12
+3.Deep expertise with the Django framework
+4.Strong knowledge of PostgreSQL, including schema design, query optimization, and management
+5.Hands-on experience with Redis and AWS S3
+6.Proficient in implementing and managing various authentication systems, including Django Session-Based Authentication, JWTAuthentication, and FirebaseAuthentication
+7.Experience with Temporal or other workflow orchestration systems is highly desirable
+8.Solid understanding of the Django ORM
+9.Prior experience in logistics and supply chain projects is a significant plus
+10.Proven ability to work asynchronously with minimal guidance and collaborate effectively with global teams
+11.Skilled in modern coding practices, including leveraging AI tools for optimal coding efficiency and experience working with Claude Code
+12.Strong communication and interpersonal skills, with the ability to manage client interactions and deliver high-quality work under pressure
+
+
+

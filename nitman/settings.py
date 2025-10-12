@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Apps
+    'apps.blog',
+    'apps.users',
 
     # Third party apps
     'django_watchfiles',
@@ -54,7 +57,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+    
+    # user defined middleware
+    # 'nitman.middleware.RequestLoggingMiddleware',
+    # 'nitman.middleware.RateLimitMiddleware', 
+    # 'nitman.middleware.TenantMiddleware',
+    # 'nitman.middleware.JWTAuthenticationMiddleware',
+    ]
 
 ROOT_URLCONF = 'nitman.urls'
 
