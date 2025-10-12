@@ -66,7 +66,7 @@ class Draft(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    author = models.ForeignKey(Author, on_delete=models.CASCADE,related_name='posts')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -212,4 +212,58 @@ class PostSchedule(models.Model):
         verbose_name = "Post Schedule"
         verbose_name_plural = "Post Schedules"
         ordering = ["-scheduled_for"]
-        
+
+
+
+# SQL Queries
+'''
+
+SELECT 
+p.title,
+pv.title 
+FROM posts AS p
+LEFT JOIN  post_versions AS pv
+ON p.id=pv.id;
+
+SELECT 
+p.title,
+pv.title 
+FROM posts AS p
+RIGHT JOIN  post_versions AS pv
+ON p.id=pv.id;
+
+SELECT 
+p.title,
+pv.title 
+FROM posts AS p
+FULL OUTER JOIN post_versions AS pv
+ON p.id=pv.id;
+
+SELECT 
+p.title,
+pv.title 
+FROM posts AS p
+CROSS JOIN  post_versions AS pv;
+
+SELECT 
+p.title,
+pv.title 
+FROM posts AS p
+LEFT JOIN  post_versions AS pv ON p.id=pv.id
+LEFT JOIN notifications AS n ON p.id=n.content_object_id;
+
+SELECT 
+p.id,
+p.title,
+pv.title AS version_title,
+u.email,u.name,
+a.website,
+a.social_links 
+FROM posts AS p
+LEFT JOIN  post_versions AS pv ON p.id = pv.id
+INNER JOIN authors AS a ON p.author_id=a.id
+INNER JOIN users AS u ON a.user_id=u.id
+WHERE u.email= 'john.doe@gmail.com'
+DISTINCT ON (u.email)
+ORDER BY p.created_at DESC;
+'''

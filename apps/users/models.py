@@ -40,7 +40,7 @@ class Author(models.Model):
         return self.user.name
     
     class Meta:
-        db_table = "author_profiles"
-        verbose_name = "Author Profile"
-        verbose_name_plural = "Author Profiles"
+        db_table = "authors"
+        verbose_name = "Author"
+        verbose_name_plural = "Authors"
         ordering = ["-created_at"]
