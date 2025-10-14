@@ -20,6 +20,28 @@ services:
       - nitman_default
     command: ["/app/scripts.sh"]
   
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nitman
+    networks:
+      - nitman_default
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=http://nitman:8000
+    command: npm run dev
+  
   postgres:
     image: postgres:latest
     container_name: postgres
