@@ -62,3 +62,16 @@ class PostORMSerializer(serializers.Serializer):
     name = serializers.CharField(source='author.user.name')
     website = serializers.URLField(source='author.website', allow_blank=True)
     social_links = serializers.JSONField(source='author.social_links')
+
+class PostAggregationSerializer(serializers.Serializer):
+      total_posts = serializers.IntegerField(),
+      avg_posts = serializers.IntegerField(),
+      sum_posts = serializers.IntegerField(),
+      min_posts = serializers.IntegerField(),
+      max_posts = serializers.IntegerField(),
+      tags = serializers.IntegerField()
+
+class PostAnnotationSerializer(serializers.Serializer):
+    tags_count = serializers.IntegerField(default=0)
+    avg_tags = serializers.IntegerField(default=0)
+    

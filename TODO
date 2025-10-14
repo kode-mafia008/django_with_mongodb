@@ -63,7 +63,20 @@
 
 ---
 
-### **5. Task Orchestration & Workflow Systems**
+---
+
+### **5. Caching & Performance**
+
+* ✅ **Django caching framework** (File-based, Memcached, Redis)
+* ✅ **Query optimization** (minimizing ORM calls, lazy vs eager loading)
+* ✅ **N+1 problem and how to avoid it**
+* ✅ **Scaling strategies**: horizontal vs vertical scaling
+* ✅ **Load testing tools** (Locust, k6 basics)
+
+---
+
+
+### **6. Task Orchestration & Workflow Systems**
 
 * ✅ **Celery** (you already noted this): retries, chaining, periodic tasks
 * ✅ **Temporal** (important here):
@@ -76,7 +89,7 @@
 
 ---
 
-### **6. AWS & DevOps Basics**
+### **7. AWS & DevOps Basics**
 
 * ✅ **AWS S3** – boto3 basics, pre-signed URLs, permissions, storage backends
 * ✅ **AWS EC2** – deployment, environment setup
@@ -85,17 +98,6 @@
 * ✅ **Basic CI/CD** – GitHub Actions or similar
 * ✅ **Logging & Monitoring** – AWS CloudWatch, Django logging configuration
 
----
-
-### **7. Caching & Performance**
-
-* ✅ **Django caching framework** (File-based, Memcached, Redis)
-* ✅ **Query optimization** (minimizing ORM calls, lazy vs eager loading)
-* ✅ **N+1 problem and how to avoid it**
-* ✅ **Scaling strategies**: horizontal vs vertical scaling
-* ✅ **Load testing tools** (Locust, k6 basics)
-
----
 
 ### **8. Authentication & Security**
 

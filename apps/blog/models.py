@@ -66,6 +66,7 @@ class Draft(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
+    tags = models.ManyToManyField(Tag, related_name='posts')
     author = models.ForeignKey(Author, on_delete=models.CASCADE,related_name='posts')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
