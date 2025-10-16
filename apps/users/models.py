@@ -27,7 +27,7 @@ class User(models.Model):
         ordering = ["-created_at"]
 
 class Author(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='authors')
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='author')
     avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     website = models.URLField(blank=True)
     social_links = models.JSONField(default=dict)  # JSONField

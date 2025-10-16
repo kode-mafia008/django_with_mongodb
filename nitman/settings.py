@@ -65,6 +65,7 @@ MIDDLEWARE = [
     # 'nitman.middleware.RateLimitMiddleware', 
     # 'nitman.middleware.TenantMiddleware',
     # 'nitman.middleware.JWTAuthenticationMiddleware',
+    'nitman.middleware.RequestTimingMiddleware',
     ]
 
 ROOT_URLCONF = 'nitman.urls'

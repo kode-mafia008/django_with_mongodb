@@ -18,3 +18,4 @@ whitenoise==6.6.0
 django-watchfiles
 pymongo
 dnspython
+django-debug-toolbar

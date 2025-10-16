@@ -176,3 +176,21 @@ class JWTAuthenticationMiddleware:
         if auth_header.startswith('Bearer '):
             return auth_header[7:]
         return None
+
+from math import ceil
+
+class RequestTimingMiddleware:
+    def __init__(self,get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        start = time.time()
+        response = self.get_response(request)
+        duration = time.time() - start
+        response['X-Request-Duration'] = round(duration,2)
+        logger.info(f"Request: {request.path} took {duration:.2f}s")
+        return response
+
+    
+
+        
